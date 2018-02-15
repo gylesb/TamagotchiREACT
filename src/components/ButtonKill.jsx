@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function ButtonKill() {
+function ButtonKill(props) {
   function handleButtonKillClick() {
     props.onButtonKillClick();
   }
@@ -12,4 +13,8 @@ function ButtonKill() {
   );
 }
 
-export default ButtonSleep;
+ButtonKill.propTypes = {
+  onButtonKillClick: PropTypes.func
+};
+
+export default ButtonKill;

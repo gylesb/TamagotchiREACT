@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function ButtonSleep() {
+function ButtonSleep(props) {
   function handleButtonSleepClick() {
     props.onButtonSleepClick();
   }
@@ -11,5 +12,9 @@ function ButtonSleep() {
     </div>
   );
 }
+
+ButtonSleep.propTypes = {
+  onButtonSleepClick: PropTypes.func
+};
 
 export default ButtonSleep;
